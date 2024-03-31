@@ -12,6 +12,7 @@ python3 menu.py
 ## Interface 
 
 Selection de (0 à n) options
+
 <img width="287" alt="image" src="https://github.com/dev-tutu/ansiblePY-gui/assets/164091895/b3fdb0d7-61d8-411d-9e43-fbc610c9f7d0">
 
 ## Récupèration des informations Ansible
