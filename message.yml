@@ -1,0 +1,7 @@
+---
+- name: Afficher un message sur localhost
+  hosts: localhost
+  tasks:
+    - name: Afficher un message
+      debug:
+        msg: "Bonjour, ceci est un message affiché par Ansible sur localhost."

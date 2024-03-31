@@ -1,0 +1,16 @@
+---
+- name: Installer l'utilitaire tree sur macOS
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Vérifier si Homebrew est installé
+      command: "which brew"
+      register: brew_check
+      ignore_errors: yes
+
+    - name: Installer Homebrew si nécessaire
+      command: "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+      when: brew_check.rc != 0
+
+    - name: Installer tree avec Homebrew
+      command: "brew install tree"
